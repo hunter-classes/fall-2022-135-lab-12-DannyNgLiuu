@@ -22,4 +22,4 @@ tests.o: tests.cpp doctest.h vectors.h optimism.h fusion.h pairwise.h
 	g++ -std=c++11 -c tests.cpp
 
 clean:
-	rm -f main main.o vectors.o optimism.o fusion.o pairwise.o tests.o
+	rm -f main main.o vectors.o optimism.o fusion.o pairwise.o tests.o tests
