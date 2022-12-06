@@ -16,6 +16,10 @@ fusion.o: fusion.cpp fusion.h
 pairwise.o: pairwise.cpp pairwise.h
 	g++ -std=c++11 -c pairwise.cpp
 
-test: 
+tests: tests.o vectors.o optimism.o fusion.o pairwise.o
+	g++ -o tests tests.o vectors.o optimism.o fusion.o pairwise.o
+tests.o: tests.cpp doctest.h vectors.h optimism.h fusion.h pairwise.h
+	g++ -std=c++11 -c tests.cpp
+
 clean:
-	rm -f main main.o vectors.o optimism.o fusion.o pairwise.o
+	rm -f main main.o vectors.o optimism.o fusion.o pairwise.o tests.o

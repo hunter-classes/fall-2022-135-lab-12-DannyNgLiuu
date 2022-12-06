@@ -13,10 +13,11 @@ void print(std::vector<int> const &input)
 
 int main() {
 
-std::vector<int> v1{5,4,5,7,1,10};
-std::vector<int> v2{5,4,5,7,1,10};
+std::vector<int> v1{1,2,3};
+std::vector<int> v2{4,5};
+gogeta(v1, v2);
 std::vector<int> temp = sumPairWise(v1, v2);
-    print(temp);
+    print(v1);
 
     return 0;
 }
